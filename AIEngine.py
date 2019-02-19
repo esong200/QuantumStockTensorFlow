@@ -435,6 +435,8 @@ with open(file_directory) as json_file:
     print('opening Json ')
     allData = json.load(json_file)
 
+print('Json successfully opened')
+
 compiledData = []
 avg50Day = []
 openp = []
