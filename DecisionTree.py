@@ -120,6 +120,8 @@ print('Done formatting')
 X, y = formatData(dailyOpen, dailyClose, dailyHigh, dailyLow,dailyVolume)
 testX, testy = dropOut(X,y)
 
+print("done")
+
 X = preprocessing.scale(np.asarray(X))
 X_scale = preprocessing.scale(X)
 y = np.asarray(y)

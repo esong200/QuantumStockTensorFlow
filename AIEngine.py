@@ -591,7 +591,7 @@ print('Predictions:')
 print(predictions)
 print('Training Results:')
 print(trainingResults)
-print('Test Re  sults:')
+print('Test Results:')
 print(testResults)
 
 model.save_weights('AAPL30DayWeights.h5')
