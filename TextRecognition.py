@@ -3,6 +3,7 @@ from google.cloud.language_v1 import enums
 import sys
 import os
 import six
+from newspaper import Article
 import json
 
 
@@ -33,5 +34,10 @@ class Analyzer:
 
 if __name__ == '__main__':
     agent = Analyzer(sys.argv[1], sys.argv[2])
-    print(agent.get_sentiment('This computer is amazing. Overall, the processor is fast and the gpu is very powerfull, however, the screen is kind of small'))
+    url = "https://www.marketwatch.com/story/heres-a-better-buy-and-hold-strategy-using-the-dow-jones-industrial-average-2019-02-26"
+    a = Article(url, language='en')  # English
+    a.download()
+    a.parse()
+    print(a.text)
+    #print(agent.get_sentiment(a.text))
 
